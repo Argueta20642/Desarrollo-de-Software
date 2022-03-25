@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2721ED01-B17C-4CF5-BFDF-C77DE7D792C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel5taReal</RootNamespace>
+    <AssemblyName>Hotel5taReal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Core, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Front-End\FrmAdmin\Conexion.cs" />
+    <Compile Include="Front-End\FrmAdmin\FrmFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmFacturas.Designer.cs">
+      <DependentUpon>FrmFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmHabitaciones.Designer.cs">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmHomeAd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmHomeAd.Designer.cs">
+      <DependentUpon>FrmHomeAd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmPlanilla.Designer.cs">
+      <DependentUpon>FrmPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmReservar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmReservar.Designer.cs">
+      <DependentUpon>FrmReservar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmAdmin\Home.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmLoad.Designer.cs">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmManuReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmManuReporte.Designer.cs">
+      <DependentUpon>FrmManuReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmMenuUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmLogins\FrmMenuUsuario.Designer.cs">
+      <DependentUpon>FrmMenuUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmUser\FrmHomeUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmUser\FrmHomeUS.Designer.cs">
+      <DependentUpon>FrmHomeUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\FrmUser\FrmRecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front-End\FrmUser\FrmRecepcion.Designer.cs">
+      <DependentUpon>FrmRecepcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front-End\Validar.cs" />
+    <Compile Include="Hotel5taRealDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hotel5taRealDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporteria\RPClientes\Cliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RPClientes\FrmReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteria\RPClientes\FrmReporteClientes.Designer.cs">
+      <DependentUpon>FrmReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RProductos\FrmReportProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteria\RProductos\FrmReportProducto.Designer.cs">
+      <DependentUpon>FrmReportProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RProductos\Producto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Producto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RPVentas\FrmReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteria\RPVentas\FrmReporteVenta.Designer.cs">
+      <DependentUpon>FrmReporteVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RPVentas\Ventas.cs">
+      <DependentUpon>Ventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteria\RPVentas\Ventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmFacturas.resx">
+      <DependentUpon>FrmFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmHabitaciones.resx">
+      <DependentUpon>FrmHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmHomeAd.resx">
+      <DependentUpon>FrmHomeAd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmPlanilla.resx">
+      <DependentUpon>FrmPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmReservar.resx">
+      <DependentUpon>FrmReservar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmAdmin\FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmLogins\FrmLoad.resx">
+      <DependentUpon>FrmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmLogins\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmLogins\FrmManuReporte.resx">
+      <DependentUpon>FrmManuReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmLogins\FrmMenuUsuario.resx">
+      <DependentUpon>FrmMenuUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmUser\FrmHomeUS.resx">
+      <DependentUpon>FrmHomeUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front-End\FrmUser\FrmRecepcion.resx">
+      <DependentUpon>FrmRecepcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reporteria\RPClientes\FrmReporteClientes.resx">
+      <DependentUpon>FrmReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteria\RPClientes\ReporteCliente.rdlc" />
+    <EmbeddedResource Include="Reporteria\RProductos\FrmReportProducto.resx">
+      <DependentUpon>FrmReportProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteria\RProductos\ReporteProductos.rdlc" />
+    <EmbeddedResource Include="Reporteria\RPVentas\FrmReporteVenta.resx">
+      <DependentUpon>FrmReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteria\RPVentas\ReporteVentas.rdlc" />
+    <None Include="Front-End\FrmAdmin\Home.xsc">
+      <DependentUpon>Home.xsd</DependentUpon>
+    </None>
+    <None Include="Front-End\FrmAdmin\Home.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Home.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Front-End\FrmAdmin\Home.xss">
+      <DependentUpon>Home.xsd</DependentUpon>
+    </None>
+    <None Include="Hotel5taRealDataSet.xsc">
+      <DependentUpon>Hotel5taRealDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Hotel5taRealDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Hotel5taRealDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hotel5taRealDataSet.xss">
+      <DependentUpon>Hotel5taRealDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Reporteria\RPClientes\Cliente.xsc">
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Reporteria\RPClientes\Cliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporteria\RPClientes\Cliente.xss">
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Reporteria\RProductos\Producto.xsc">
+      <DependentUpon>Producto.xsd</DependentUpon>
+    </None>
+    <None Include="Reporteria\RProductos\Producto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Producto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporteria\RProductos\Producto.xss">
+      <DependentUpon>Producto.xsd</DependentUpon>
+    </None>
+    <None Include="Reporteria\RPVentas\Ventas.xsc">
+      <DependentUpon>Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Reporteria\RPVentas\Ventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporteria\RPVentas\Ventas.xss">
+      <DependentUpon>Ventas.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
